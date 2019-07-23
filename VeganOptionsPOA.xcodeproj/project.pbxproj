@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,11 +14,16 @@
 		C7373D6D22E73C60004A0C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6B22E73C60004A0C18 /* Main.storyboard */; };
 		C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6E22E73C60004A0C18 /* Assets.xcassets */; };
 		C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */; };
+		C7D1839722E74CEC00720807 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D1839622E74CEC00720807 /* GoogleService-Info.plist */; };
+		F0CC3A75F2A74934E74ABA2B /* libPods-VeganOptionsPOA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE0B845F91B135FF90F4521 /* libPods-VeganOptionsPOA.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DB9416C22E73F9A00F2C834 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0DB9416E22E73FD900F2C834 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		42112C806B609EE66AA91C6A /* Pods-VeganOptionsPOA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeganOptionsPOA.debug.xcconfig"; path = "Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA.debug.xcconfig"; sourceTree = "<group>"; };
+		6BE0B845F91B135FF90F4521 /* libPods-VeganOptionsPOA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeganOptionsPOA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABD922577219FFA53744EA3 /* Pods-VeganOptionsPOA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeganOptionsPOA.release.xcconfig"; path = "Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA.release.xcconfig"; sourceTree = "<group>"; };
 		C7373D6422E73C60004A0C18 /* VeganOptionsPOA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeganOptionsPOA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7373D6722E73C60004A0C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7373D6922E73C60004A0C18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		C7373D6E22E73C60004A0C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7373D7122E73C60004A0C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7373D7322E73C60004A0C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D1839622E74CEC00720807 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CC3A75F2A74934E74ABA2B /* libPods-VeganOptionsPOA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20B9F9971A892D842E8544EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BE0B845F91B135FF90F4521 /* libPods-VeganOptionsPOA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		824CB0735897F43ADE6E9A8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42112C806B609EE66AA91C6A /* Pods-VeganOptionsPOA.debug.xcconfig */,
+				BABD922577219FFA53744EA3 /* Pods-VeganOptionsPOA.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C7373D5B22E73C60004A0C18 = {
 			isa = PBXGroup;
 			children = (
 				C7373D6622E73C60004A0C18 /* VeganOptionsPOA */,
+				C7D1839522E74CD600720807 /* SupportingFiles */,
 				C7373D6522E73C60004A0C18 /* Products */,
+				824CB0735897F43ADE6E9A8D /* Pods */,
+				20B9F9971A892D842E8544EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +85,48 @@
 		C7373D6622E73C60004A0C18 /* VeganOptionsPOA */ = {
 			isa = PBXGroup;
 			children = (
+				C7D1839922E74D1D00720807 /* Service */,
+				C7D1839822E74D1800720807 /* Model */,
 				C7373D6722E73C60004A0C18 /* AppDelegate.swift */,
-				C7373D6922E73C60004A0C18 /* ViewController.swift */,
-				C7373D6B22E73C60004A0C18 /* Main.storyboard */,
 				C7373D6E22E73C60004A0C18 /* Assets.xcassets */,
 				0DB9416C22E73F9A00F2C834 /* TableViewController.swift */,
 				C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */,
 				C7373D7322E73C60004A0C18 /* Info.plist */,
 				0DB9416E22E73FD900F2C834 /* PlacesTableViewCell.swift */,
+				C7D1839A22E74D2600720807 /* Scenes */,
 			);
 			path = VeganOptionsPOA;
+			sourceTree = "<group>";
+		};
+		C7D1839522E74CD600720807 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C7D1839622E74CEC00720807 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C7D1839822E74D1800720807 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7D1839922E74D1D00720807 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C7D1839A22E74D2600720807 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C7373D6B22E73C60004A0C18 /* Main.storyboard */,
+				C7373D6922E73C60004A0C18 /* ViewController.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7373D7622E73C60004A0C18 /* Build configuration list for PBXNativeTarget "VeganOptionsPOA" */;
 			buildPhases = (
+				CAACBFBD8101326B172E1648 /* [CP] Check Pods Manifest.lock */,
 				C7373D6022E73C60004A0C18 /* Sources */,
 				C7373D6122E73C60004A0C18 /* Frameworks */,
 				C7373D6222E73C60004A0C18 /* Resources */,
+				A31247648FEC96D61821677C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,12 +190,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */,
+				C7D1839722E74CEC00720807 /* GoogleService-Info.plist in Resources */,
 				C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */,
 				C7373D6D22E73C60004A0C18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A31247648FEC96D61821677C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAACBFBD8101326B172E1648 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeganOptionsPOA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C7373D6022E73C60004A0C18 /* Sources */ = {
@@ -288,6 +392,7 @@
 		};
 		C7373D7722E73C60004A0C18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42112C806B609EE66AA91C6A /* Pods-VeganOptionsPOA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +410,7 @@
 		};
 		C7373D7822E73C60004A0C18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BABD922577219FFA53744EA3 /* Pods-VeganOptionsPOA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
