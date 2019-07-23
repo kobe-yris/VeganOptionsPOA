@@ -15,6 +15,10 @@
 		C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6E22E73C60004A0C18 /* Assets.xcassets */; };
 		C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */; };
 		C7D1839722E74CEC00720807 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D1839622E74CEC00720807 /* GoogleService-Info.plist */; };
+		C7D1839C22E74F7400720807 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839B22E74F7400720807 /* User.swift */; };
+		C7D183A022E74F8D00720807 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839F22E74F8D00720807 /* Post.swift */; };
+		C7D183A222E74F9500720807 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183A122E74F9500720807 /* Place.swift */; };
+		C7D183A422E74FA400720807 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183A322E74FA400720807 /* Report.swift */; };
 		F0CC3A75F2A74934E74ABA2B /* libPods-VeganOptionsPOA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE0B845F91B135FF90F4521 /* libPods-VeganOptionsPOA.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,10 @@
 		C7373D7122E73C60004A0C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7373D7322E73C60004A0C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D1839622E74CEC00720807 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C7D1839B22E74F7400720807 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C7D1839F22E74F8D00720807 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C7D183A122E74F9500720807 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		C7D183A322E74FA400720807 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,10 @@
 		C7D1839822E74D1800720807 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7D1839B22E74F7400720807 /* User.swift */,
+				C7D1839F22E74F8D00720807 /* Post.swift */,
+				C7D183A122E74F9500720807 /* Place.swift */,
+				C7D183A322E74FA400720807 /* Report.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +260,10 @@
 				C7373D6A22E73C60004A0C18 /* ViewController.swift in Sources */,
 				0DB9416D22E73F9A00F2C834 /* TableViewController.swift in Sources */,
 				C7373D6822E73C60004A0C18 /* AppDelegate.swift in Sources */,
+				C7D183A422E74FA400720807 /* Report.swift in Sources */,
+				C7D183A022E74F8D00720807 /* Post.swift in Sources */,
+				C7D1839C22E74F7400720807 /* User.swift in Sources */,
+				C7D183A222E74F9500720807 /* Place.swift in Sources */,
 				0DB9416F22E73FD900F2C834 /* PlacesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
