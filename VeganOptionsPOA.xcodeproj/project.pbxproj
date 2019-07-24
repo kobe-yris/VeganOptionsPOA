@@ -10,7 +10,7 @@
 		0DB9416D22E73F9A00F2C834 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9416C22E73F9A00F2C834 /* TableViewController.swift */; };
 		0DB9416F22E73FD900F2C834 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9416E22E73FD900F2C834 /* PlacesTableViewCell.swift */; };
 		C7373D6822E73C60004A0C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7373D6722E73C60004A0C18 /* AppDelegate.swift */; };
-		C7373D6A22E73C60004A0C18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7373D6922E73C60004A0C18 /* ViewController.swift */; };
+		C7373D6A22E73C60004A0C18 /* PlaceDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7373D6922E73C60004A0C18 /* PlaceDetailController.swift */; };
 		C7373D6D22E73C60004A0C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6B22E73C60004A0C18 /* Main.storyboard */; };
 		C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6E22E73C60004A0C18 /* Assets.xcassets */; };
 		C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,11 @@
 		C7D183A022E74F8D00720807 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839F22E74F8D00720807 /* Post.swift */; };
 		C7D183A222E74F9500720807 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183A122E74F9500720807 /* Place.swift */; };
 		C7D183A422E74FA400720807 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183A322E74FA400720807 /* Report.swift */; };
+		C7D183AC22E7DF2800720807 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183AB22E7DF2800720807 /* PlaceService.swift */; };
+		C7D183AF22E7DFF700720807 /* PlaceServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183AE22E7DFF700720807 /* PlaceServiceProtocol.swift */; };
+		C7D183B422E7E11C00720807 /* PlaceFirebaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183B322E7E11C00720807 /* PlaceFirebaseProvider.swift */; };
+		C7D183B622E7E25200720807 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183B522E7E25200720807 /* EntryPoint.swift */; };
+		C7D183B922E7E41100720807 /* PlaceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183B822E7E41100720807 /* PlaceDetailViewModel.swift */; };
 		F0CC3A75F2A74934E74ABA2B /* libPods-VeganOptionsPOA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE0B845F91B135FF90F4521 /* libPods-VeganOptionsPOA.a */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +35,7 @@
 		BABD922577219FFA53744EA3 /* Pods-VeganOptionsPOA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeganOptionsPOA.release.xcconfig"; path = "Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA.release.xcconfig"; sourceTree = "<group>"; };
 		C7373D6422E73C60004A0C18 /* VeganOptionsPOA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeganOptionsPOA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7373D6722E73C60004A0C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7373D6922E73C60004A0C18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7373D6922E73C60004A0C18 /* PlaceDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailController.swift; sourceTree = "<group>"; };
 		C7373D6C22E73C60004A0C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7373D6E22E73C60004A0C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7373D7122E73C60004A0C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +45,11 @@
 		C7D1839F22E74F8D00720807 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C7D183A122E74F9500720807 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		C7D183A322E74FA400720807 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		C7D183AB22E7DF2800720807 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		C7D183AE22E7DFF700720807 /* PlaceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServiceProtocol.swift; sourceTree = "<group>"; };
+		C7D183B322E7E11C00720807 /* PlaceFirebaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFirebaseProvider.swift; sourceTree = "<group>"; };
+		C7D183B522E7E25200720807 /* EntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		C7D183B822E7E41100720807 /* PlaceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,7 @@
 		C7373D6622E73C60004A0C18 /* VeganOptionsPOA */ = {
 			isa = PBXGroup;
 			children = (
+				C7D183AD22E7DFB300720807 /* Protocol */,
 				C7D1839922E74D1D00720807 /* Service */,
 				C7D1839822E74D1800720807 /* Model */,
 				C7373D6722E73C60004A0C18 /* AppDelegate.swift */,
@@ -128,6 +139,7 @@
 		C7D1839922E74D1D00720807 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C7D183AB22E7DF2800720807 /* PlaceService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -135,10 +147,45 @@
 		C7D1839A22E74D2600720807 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C7D183B722E7E3FB00720807 /* PlaceDetail */,
 				C7373D6B22E73C60004A0C18 /* Main.storyboard */,
-				C7373D6922E73C60004A0C18 /* ViewController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C7D183AD22E7DFB300720807 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C7D183B222E7E10100720807 /* Provider */,
+				C7D183B122E7E0F700720807 /* Service */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C7D183B122E7E0F700720807 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C7D183AE22E7DFF700720807 /* PlaceServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C7D183B222E7E10100720807 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C7D183B322E7E11C00720807 /* PlaceFirebaseProvider.swift */,
+				C7D183B522E7E25200720807 /* EntryPoint.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		C7D183B722E7E3FB00720807 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C7D183B822E7E41100720807 /* PlaceDetailViewModel.swift */,
+				C7373D6922E73C60004A0C18 /* PlaceDetailController.swift */,
+			);
+			path = PlaceDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,14 +304,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7373D6A22E73C60004A0C18 /* ViewController.swift in Sources */,
+				C7373D6A22E73C60004A0C18 /* PlaceDetailController.swift in Sources */,
 				0DB9416D22E73F9A00F2C834 /* TableViewController.swift in Sources */,
 				C7373D6822E73C60004A0C18 /* AppDelegate.swift in Sources */,
+				C7D183B422E7E11C00720807 /* PlaceFirebaseProvider.swift in Sources */,
+				C7D183B922E7E41100720807 /* PlaceDetailViewModel.swift in Sources */,
 				C7D183A422E74FA400720807 /* Report.swift in Sources */,
+				C7D183AC22E7DF2800720807 /* PlaceService.swift in Sources */,
 				C7D183A022E74F8D00720807 /* Post.swift in Sources */,
+				C7D183B622E7E25200720807 /* EntryPoint.swift in Sources */,
 				C7D1839C22E74F7400720807 /* User.swift in Sources */,
 				C7D183A222E74F9500720807 /* Place.swift in Sources */,
 				0DB9416F22E73FD900F2C834 /* PlacesTableViewCell.swift in Sources */,
+				C7D183AF22E7DFF700720807 /* PlaceServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eldorado.VeganOptionsPOA;
+				PRODUCT_BUNDLE_IDENTIFIER = Eldorado.VegOptionsPOA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -435,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eldorado.VeganOptionsPOA;
+				PRODUCT_BUNDLE_IDENTIFIER = Eldorado.VegOptionsPOA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

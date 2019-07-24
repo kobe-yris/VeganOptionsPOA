@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlaceDetailController: UIViewController {
     @IBOutlet weak var placeTitle: UILabel!
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var placeDescription: UITextView!
