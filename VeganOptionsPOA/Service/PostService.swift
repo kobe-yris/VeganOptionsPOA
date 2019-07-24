@@ -17,8 +17,8 @@ class PostService: PostServiceProtocol {
         self.provider = provider
     }
     
-    func fetchPlaces(completion: @escaping (Error?, [Post]?) -> Void) {
-        var places: [Post] = []
+    func fetchPosts(completion: @escaping (Error?, [Post]?) -> Void) {
+        var posts: [Post] = []
         _ = provider.getDocuments { error, data in
             if let err = error {
                 completion(err, nil)
@@ -27,12 +27,12 @@ class PostService: PostServiceProtocol {
                     return
                 }
                 for data in data {
-                    if let place = try? JSONDecoder.init().decode(Post.self, from: data) {
-                        places.append(place)
+                    if let post = try? JSONDecoder.init().decode(Post.self, from: data) {
+                        posts.append(post)
                     }
                 }
             }
-            completion(nil, places)
+            completion(nil, posts)
         }
     }
     

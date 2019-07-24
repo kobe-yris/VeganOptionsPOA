@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PostServiceProtocol {
-    func fetchPlaces(completion: @escaping (Error?, [Post]?) -> Void)
+    func fetchPosts(completion: @escaping (Error?, [Post]?) -> Void)
 }
 
 protocol PostProtocol {
