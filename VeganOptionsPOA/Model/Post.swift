@@ -8,11 +8,34 @@
 
 import Foundation
 
-struct Post: Codable {
-    var id: String
-    var title: String
-    var postText: String
-    var date: String
-    var likes: Int
-    var user: String
+class Post: Codable {
+    
+    let identifier: String
+    let title: String
+    let postText: String
+    let date: String
+    let likes: String
+    let user: String
+    
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: PostCodingKeys.self)
+        identifier = try values.decode(String.self, forKey: .identifier)
+        title = try values.decode(String.self, forKey: .title)
+        postText = try values.decode(String.self, forKey: .postText)
+        date = try values.decode(String.self, forKey: .date)
+        likes = try values.decode(String.self, forKey: .likes)
+        user = try values.decode(String.self, forKey: .user)
+    }
+    
+}
+
+extension Post {
+    enum PostCodingKeys: String, CodingKey {
+        case identifier = "id"
+        case title = "title"
+        case postText = "postText"
+        case date = "date"
+        case likes = "likes"
+        case user = "user"
+    }
 }

@@ -12,7 +12,7 @@ class Place: Codable {
     
     let identifier: String
     let name: String
-    var address: String
+    let address: String
     let phone: String
     
     required init(from decoder: Decoder) throws {

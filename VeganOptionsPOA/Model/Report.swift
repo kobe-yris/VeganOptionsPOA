@@ -12,7 +12,7 @@ class Report: Codable {
     
     let identifier: String
     let postId: String
-    var user: String
+    let user: String
     let userReported: String
     
     required init(from decoder: Decoder) throws {
