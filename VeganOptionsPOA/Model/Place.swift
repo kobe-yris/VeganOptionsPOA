@@ -7,13 +7,6 @@
 //
 
 import Foundation
-//
-//struct Place: Codable {
-//    var id: String
-//    var name: String
-//    var address: String
-//    var phone: String
-//}
 
 class Place: Codable {
     

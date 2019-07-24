@@ -8,9 +8,28 @@
 
 import Foundation
 
-struct Report: Codable {
-    var id: String
-    var postId: String
+class Report: Codable {
+    
+    let identifier: String
+    let postId: String
     var user: String
-    var userReported: String
+    let userReported: String
+    
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: ReportCodingKeys.self)
+        identifier = try values.decode(String.self, forKey: .identifier)
+        postId = try values.decode(String.self, forKey: .postId)
+        user = try values.decode(String.self, forKey: .user)
+        userReported = try values.decode(String.self, forKey: .userReported)
+    }
+    
+}
+
+extension Report {
+    enum ReportCodingKeys: String, CodingKey {
+        case identifier = "id"
+        case postId = "postId"
+        case user = "user"
+        case userReported = "userReported"
+    }
 }
