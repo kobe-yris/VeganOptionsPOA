@@ -24,6 +24,10 @@ class PostDetailController: UIViewController, UITextViewDelegate {
         
         newPost.text = "Faça sua recomendação ou escreva uma opinião"
         newPost.textColor = UIColor.lightGray
+        
+        commentBtn.layer.cornerRadius = 5
+        commentBtn.layer.borderWidth = 0.5
+        commentBtn.layer.borderColor = UIColor.lightGray.cgColor        
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -43,5 +47,6 @@ class PostDetailController: UIViewController, UITextViewDelegate {
             newPost.textColor = UIColor.lightGray
         }
     }
+    
     
 }
