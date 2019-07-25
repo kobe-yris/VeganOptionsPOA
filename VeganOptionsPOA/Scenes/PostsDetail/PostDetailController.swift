@@ -8,17 +8,40 @@
 
 import UIKit
 
-class PostDetailController: UIViewController {
-    @IBOutlet weak var postTitle: UILabel!
-    @IBOutlet weak var postText: UITextView!
-    @IBOutlet weak var postDate: UILabel!
+class PostDetailController: UIViewController, UITextViewDelegate {
+    
+    @IBOutlet weak var newPost: UITextView!
+    @IBOutlet weak var commentBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-    
+        newPost.delegate = self
         
+        newPost!.layer.borderWidth = 0.5
+        newPost!.layer.borderColor = UIColor.lightGray.cgColor
+        newPost!.layer.cornerRadius = 5
+        
+        newPost.text = "Faça sua recomendação ou escreva uma opinião"
+        newPost.textColor = UIColor.lightGray
     }
-
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return textView.text.count + (text.count - range.length) <= 200
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if newPost.textColor == UIColor.lightGray {
+            newPost.text = nil
+            newPost.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if newPost.text.isEmpty {
+            newPost.text = "Faça sua recomendação ou escreva uma opinião"
+            newPost.textColor = UIColor.lightGray
+        }
+    }
+    
 }

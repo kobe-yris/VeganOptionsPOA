@@ -14,6 +14,7 @@ class PlaceDetailController: UIViewController {
     @IBOutlet weak var placeDescription: UITextView!
     @IBOutlet weak var placeAddress: UILabel!
     @IBOutlet weak var placePhone: UILabel!
+    @IBOutlet weak var viewComments: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class PlaceDetailController: UIViewController {
         placeAddress.text = placesAddress[myIndex]
         placePhone.text = placesPhone[myIndex]
     }
+    
+    
 
 
 }
