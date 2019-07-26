@@ -17,7 +17,7 @@
 		C7373D6D22E73C60004A0C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6B22E73C60004A0C18 /* Main.storyboard */; };
 		C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6E22E73C60004A0C18 /* Assets.xcassets */; };
 		C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */; };
-		C7D1839722E74CEC00720807 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D1839622E74CEC00720807 /* GoogleService-Info.plist */; };
+		C775E36922EB367900E1E4B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */; };
 		C7D1839C22E74F7400720807 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839B22E74F7400720807 /* User.swift */; };
 		C7D183A022E74F8D00720807 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839F22E74F8D00720807 /* Post.swift */; };
 		C7D183A222E74F9500720807 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183A122E74F9500720807 /* Place.swift */; };
@@ -49,7 +49,7 @@
 		C7373D6E22E73C60004A0C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7373D7122E73C60004A0C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7373D7322E73C60004A0C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7D1839622E74CEC00720807 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C7D1839B22E74F7400720807 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C7D1839F22E74F8D00720807 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C7D183A122E74F9500720807 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		C7D1839522E74CD600720807 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C7D1839622E74CEC00720807 /* GoogleService-Info.plist */,
+				C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */,
-				C7D1839722E74CEC00720807 /* GoogleService-Info.plist in Resources */,
+				C775E36922EB367900E1E4B4 /* GoogleService-Info.plist in Resources */,
 				C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */,
 				C7373D6D22E73C60004A0C18 /* Main.storyboard in Resources */,
 			);
@@ -496,12 +496,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95JV778GN4;
 				INFOPLIST_FILE = VeganOptionsPOA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Eldorado.VegOptionsPOA;
+				PRODUCT_BUNDLE_IDENTIFIER = eldorado.VeganOptions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,12 +516,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95JV778GN4;
 				INFOPLIST_FILE = VeganOptionsPOA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Eldorado.VegOptionsPOA;
+				PRODUCT_BUNDLE_IDENTIFIER = eldorado.VeganOptions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>639865540417-i2qh59d188c2d9m8qslheqrtfkuql4nd.apps.googleusercontent.com</string>
+	<string>871301346793-4pfd2t53aldo8vqs7tldbsutfg7be7bg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.639865540417-i2qh59d188c2d9m8qslheqrtfkuql4nd</string>
+	<string>com.googleusercontent.apps.871301346793-4pfd2t53aldo8vqs7tldbsutfg7be7bg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAyErQb8lUWVkdRLWPkM4tOxikYqBZn3q4</string>
+	<string>AIzaSyBNsUOLiieWAem_ChcfjQ2n_HwnLxNivaA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>639865540417</string>
+	<string>871301346793</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Eldorado.VegOptionsPOA</string>
+	<string>eldorado.VeganOptions</string>
 	<key>PROJECT_ID</key>
-	<string>veganoptionspoa</string>
+	<string>veganoptions-51edf</string>
 	<key>STORAGE_BUCKET</key>
-	<string>veganoptionspoa.appspot.com</string>
+	<string>veganoptions-51edf.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:639865540417:ios:0a6a44f4a14b3abf</string>
+	<string>1:871301346793:ios:2d0c62cf57483eec</string>
 	<key>DATABASE_URL</key>
-	<string>https://veganoptionspoa.firebaseio.com</string>
+	<string>https://veganoptions-51edf.firebaseio.com</string>
 </dict>
 </plist>
