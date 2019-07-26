@@ -27,7 +27,9 @@ class PostDetailController: UIViewController, UITextViewDelegate {
         
         commentBtn.layer.cornerRadius = 5
         commentBtn.layer.borderWidth = 0.5
-        commentBtn.layer.borderColor = UIColor.lightGray.cgColor        
+        commentBtn.layer.borderColor = UIColor.lightGray.cgColor
+        
+        self.hideKeyboard()
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -47,6 +49,22 @@ class PostDetailController: UIViewController, UITextViewDelegate {
             newPost.textColor = UIColor.lightGray
         }
     }
+}
+
+extension UIViewController
+{
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
     
-    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 }
