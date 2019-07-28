@@ -10,8 +10,8 @@
 		0D6AE44D22E8964F00052758 /* PostDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE44C22E8964F00052758 /* PostDetailController.swift */; };
 		0D6AE44F22E8982900052758 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE44E22E8982900052758 /* PostDetailViewModel.swift */; };
 		0D6AE45322E9DECA00052758 /* PostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE45222E9DECA00052758 /* PostDetailTableViewCell.swift */; };
-		0DB9416D22E73F9A00F2C834 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9416C22E73F9A00F2C834 /* TableViewController.swift */; };
-		0DB9416F22E73FD900F2C834 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9416E22E73FD900F2C834 /* PlacesTableViewCell.swift */; };
+		0DB9416D22E73F9A00F2C834 /* PlacesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9416C22E73F9A00F2C834 /* PlacesListController.swift */; };
+		0DB9416F22E73FD900F2C834 /* PlacesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9416E22E73FD900F2C834 /* PlacesListTableViewCell.swift */; };
 		C7373D6822E73C60004A0C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7373D6722E73C60004A0C18 /* AppDelegate.swift */; };
 		C7373D6A22E73C60004A0C18 /* PlaceDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7373D6922E73C60004A0C18 /* PlaceDetailController.swift */; };
 		C7373D6D22E73C60004A0C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6B22E73C60004A0C18 /* Main.storyboard */; };
@@ -38,8 +38,8 @@
 		0D6AE44C22E8964F00052758 /* PostDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailController.swift; sourceTree = "<group>"; };
 		0D6AE44E22E8982900052758 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		0D6AE45222E9DECA00052758 /* PostDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewCell.swift; sourceTree = "<group>"; };
-		0DB9416C22E73F9A00F2C834 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		0DB9416E22E73FD900F2C834 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		0DB9416C22E73F9A00F2C834 /* PlacesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListController.swift; sourceTree = "<group>"; };
+		0DB9416E22E73FD900F2C834 /* PlacesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListTableViewCell.swift; sourceTree = "<group>"; };
 		42112C806B609EE66AA91C6A /* Pods-VeganOptionsPOA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeganOptionsPOA.debug.xcconfig"; path = "Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA.debug.xcconfig"; sourceTree = "<group>"; };
 		6BE0B845F91B135FF90F4521 /* libPods-VeganOptionsPOA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VeganOptionsPOA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABD922577219FFA53744EA3 /* Pods-VeganOptionsPOA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeganOptionsPOA.release.xcconfig"; path = "Target Support Files/Pods-VeganOptionsPOA/Pods-VeganOptionsPOA.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,12 +130,8 @@
 				C7D183AD22E7DFB300720807 /* Protocol */,
 				C7D1839922E74D1D00720807 /* Service */,
 				C7D1839822E74D1800720807 /* Model */,
-				C7373D6722E73C60004A0C18 /* AppDelegate.swift */,
 				C7373D6E22E73C60004A0C18 /* Assets.xcassets */,
-				0DB9416C22E73F9A00F2C834 /* TableViewController.swift */,
-				C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */,
 				C7373D7322E73C60004A0C18 /* Info.plist */,
-				0DB9416E22E73FD900F2C834 /* PlacesTableViewCell.swift */,
 				C7D1839A22E74D2600720807 /* Scenes */,
 			);
 			path = VeganOptionsPOA;
@@ -144,7 +140,9 @@
 		C7863D9222ED1E700072AD30 /* PlacesList */ = {
 			isa = PBXGroup;
 			children = (
+				0DB9416C22E73F9A00F2C834 /* PlacesListController.swift */,
 				C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */,
+				0DB9416E22E73FD900F2C834 /* PlacesListTableViewCell.swift */,
 			);
 			path = PlacesList;
 			sourceTree = "<group>";
@@ -152,6 +150,8 @@
 		C7D1839522E74CD600720807 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C7373D6722E73C60004A0C18 /* AppDelegate.swift */,
+				C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */,
 				C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
@@ -342,7 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7373D6A22E73C60004A0C18 /* PlaceDetailController.swift in Sources */,
-				0DB9416D22E73F9A00F2C834 /* TableViewController.swift in Sources */,
+				0DB9416D22E73F9A00F2C834 /* PlacesListController.swift in Sources */,
 				C7373D6822E73C60004A0C18 /* AppDelegate.swift in Sources */,
 				C7D183C122E7EE3100720807 /* PostService.swift in Sources */,
 				C7D183BB22E7EDCE00720807 /* PostFirebaseProvider.swift in Sources */,
@@ -359,7 +359,7 @@
 				C7D1839C22E74F7400720807 /* User.swift in Sources */,
 				0D6AE44D22E8964F00052758 /* PostDetailController.swift in Sources */,
 				C7D183A222E74F9500720807 /* Place.swift in Sources */,
-				0DB9416F22E73FD900F2C834 /* PlacesTableViewCell.swift in Sources */,
+				0DB9416F22E73FD900F2C834 /* PlacesListTableViewCell.swift in Sources */,
 				C7D183AF22E7DFF700720807 /* PlaceServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

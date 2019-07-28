@@ -1,5 +1,5 @@
 //
-//  PlacesTableViewCell.swift
+//  PlacesListTableViewCell.swift
 //  VeganOptionsPOA
 //
 //  Created by Camila Legramante Prestes on 23/07/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlacesTableViewCell: UITableViewCell {
+class PlacesListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var placeTitle: UILabel!
     @IBOutlet weak var placeAddress: UILabel!

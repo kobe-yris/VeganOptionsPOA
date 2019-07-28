@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  PlacesListController.swift
 //  VeganOptionsPOA
 //
 //  Created by Camila Legramante Prestes on 23/07/19.
@@ -14,7 +14,7 @@ import UIKit
 //var placesImage = ["maca", "veempo", "donna", "espacovega"]
 //var placesDescription = ["Cozinha criativa e refinada de especialidades veganas servidas em ambiente descontraído e contemporâneo.", "O Vê - Empório e Restaurante Vegano é um restaurante com toques modernos e proposta inovadora, sendo o único buffet 100% vegano de Porto Alegre.", "Especializada em comida vegana, a casa serve lanches, salgados e refeições, em espacinho modesto e acolhedor.", "Menu com destaque à torta de vegetais, creme de milho, lentilha caseira, espaço tranquilo e opção delivery."]
 
-class TableViewController: UITableViewController {
+class PlacesListController: UITableViewController {
     
     @IBOutlet var placesTableView: UITableView!
     
@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PlacesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PlacesListTableViewCell
         cell.placeTitle.text = places[indexPath.row].name
 //        cell.imageView?.image = UIImage(named: placesImage[indexPath.row])
         cell.placeAddress.text = places[indexPath.row].address
@@ -50,7 +50,7 @@ class TableViewController: UITableViewController {
 }
 
 
-extension TableViewController: PlacesListViewModelDelegate {
+extension PlacesListController: PlacesListViewModelDelegate {
     func updateData() {
         self.places = viewModel.places
         self.placesTableView.reloadData()
