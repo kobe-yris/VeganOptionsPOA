@@ -28,11 +28,11 @@ class PlaceDetailController: UIViewController {
         viewComments.layer.borderWidth = 0.5
         viewComments.layer.borderColor = UIColor.lightGray.cgColor
         
-        placeTitle.text = places[myIndex]
-        placeImage.image = UIImage(named: placesImage[myIndex])
-        placeDescription.text = placesDescription[myIndex]
-        placeAddress.text = placesAddress[myIndex]
-        placePhone.text = placesPhone[myIndex]
+//        placeTitle.text = places[myIndex]
+//        placeImage.image = UIImage(named: placesImage[myIndex])
+//        placeDescription.text = placesDescription[myIndex]
+//        placeAddress.text = placesAddress[myIndex]
+//        placePhone.text = placesPhone[myIndex]
     }
 }
 

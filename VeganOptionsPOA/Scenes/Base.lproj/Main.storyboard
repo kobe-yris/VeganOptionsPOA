@@ -84,6 +84,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Opções Veganas - POA" id="5ry-qG-gID"/>
                     <connections>
+                        <outlet property="placesTableView" destination="sXc-vY-UFj" id="d2C-aP-2sw"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="segue" id="40a-nV-L1W"/>
                     </connections>
                 </tableViewController>

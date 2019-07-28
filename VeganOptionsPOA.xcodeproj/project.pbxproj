@@ -18,6 +18,7 @@
 		C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6E22E73C60004A0C18 /* Assets.xcassets */; };
 		C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */; };
 		C775E36922EB367900E1E4B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */; };
+		C7863D9422ED1E860072AD30 /* PlacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */; };
 		C7D1839C22E74F7400720807 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839B22E74F7400720807 /* User.swift */; };
 		C7D183A022E74F8D00720807 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839F22E74F8D00720807 /* Post.swift */; };
 		C7D183A222E74F9500720807 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183A122E74F9500720807 /* Place.swift */; };
@@ -50,6 +51,7 @@
 		C7373D7122E73C60004A0C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7373D7322E73C60004A0C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewModel.swift; sourceTree = "<group>"; };
 		C7D1839B22E74F7400720807 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C7D1839F22E74F8D00720807 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C7D183A122E74F9500720807 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			path = VeganOptionsPOA;
 			sourceTree = "<group>";
 		};
+		C7863D9222ED1E700072AD30 /* PlacesList */ = {
+			isa = PBXGroup;
+			children = (
+				C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */,
+			);
+			path = PlacesList;
+			sourceTree = "<group>";
+		};
 		C7D1839522E74CD600720807 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 		C7D1839A22E74D2600720807 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C7863D9222ED1E700072AD30 /* PlacesList */,
 				0D6AE44B22E8960D00052758 /* PostsDetail */,
 				C7D183B722E7E3FB00720807 /* PlaceDetail */,
 				C7373D6B22E73C60004A0C18 /* Main.storyboard */,
@@ -335,6 +346,7 @@
 				C7373D6822E73C60004A0C18 /* AppDelegate.swift in Sources */,
 				C7D183C122E7EE3100720807 /* PostService.swift in Sources */,
 				C7D183BB22E7EDCE00720807 /* PostFirebaseProvider.swift in Sources */,
+				C7863D9422ED1E860072AD30 /* PlacesListViewModel.swift in Sources */,
 				C7D183B422E7E11C00720807 /* PlaceFirebaseProvider.swift in Sources */,
 				C7D183B922E7E41100720807 /* PlaceDetailViewModel.swift in Sources */,
 				C7D183A422E74FA400720807 /* Report.swift in Sources */,
