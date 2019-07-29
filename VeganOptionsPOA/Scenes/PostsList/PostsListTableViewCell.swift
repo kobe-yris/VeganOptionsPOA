@@ -13,5 +13,6 @@ class PostsListTableViewCell: UITableViewCell {
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postText: UITextView!
     @IBOutlet weak var postData: UILabel!
+    @IBOutlet weak var postUsername: UILabel!
     
 }
