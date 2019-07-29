@@ -26,7 +26,7 @@ class PostsListViewModel {
     }
     
     func fetchPosts(placeId: String) {
-        service.fetchPosts { error, data in
+        service.fetchPosts(identifier: placeId) { error, data in
             if error == nil {
                 guard let places = data else { return }
                 self.posts = places

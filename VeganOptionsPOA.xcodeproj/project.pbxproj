@@ -107,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				C7373D6622E73C60004A0C18 /* VeganOptionsPOA */,
-				C7373D7322E73C60004A0C18 /* Info.plist */,
 				C7D1839522E74CD600720807 /* SupportingFiles */,
 				C7373D6522E73C60004A0C18 /* Products */,
 				824CB0735897F43ADE6E9A8D /* Pods */,
@@ -147,6 +146,7 @@
 		C7D1839522E74CD600720807 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				C7373D7322E73C60004A0C18 /* Info.plist */,
 				C7373D6E22E73C60004A0C18 /* Assets.xcassets */,
 				C7373D6722E73C60004A0C18 /* AppDelegate.swift */,
 				C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */,
@@ -505,7 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95JV778GN4;
-				INFOPLIST_FILE = VeganOptionsPOA/Info.plist;
+				INFOPLIST_FILE = SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,7 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95JV778GN4;
-				INFOPLIST_FILE = VeganOptionsPOA/Info.plist;
+				INFOPLIST_FILE = SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

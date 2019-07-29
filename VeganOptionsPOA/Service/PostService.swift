@@ -17,9 +17,9 @@ class PostService: PostServiceProtocol {
         self.provider = provider
     }
     
-    func fetchPosts(completion: @escaping (Error?, [Post]?) -> Void) {
+    func fetchPosts(identifier: String, completion: @escaping (Error?, [Post]?) -> Void) {
         var posts: [Post] = []
-        _ = provider.getDocuments { error, data in
+        _ = provider.getDocuments(identifier: identifier) { error, data in
             if let err = error {
                 completion(err, nil)
             } else {

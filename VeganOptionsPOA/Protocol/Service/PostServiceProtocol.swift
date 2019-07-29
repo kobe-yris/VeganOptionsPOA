@@ -9,9 +9,9 @@
 import Foundation
 
 protocol PostServiceProtocol {
-    func fetchPosts(completion: @escaping (Error?, [Post]?) -> Void)
+    func fetchPosts(identifier: String, completion: @escaping (Error?, [Post]?) -> Void)
 }
 
 protocol PostProtocol {
-    func getDocuments(completion: @escaping (Error?, [Data]?) -> Void)
+    func getDocuments(identifier: String, completion: @escaping (Error?, [Data]?) -> Void)
 }

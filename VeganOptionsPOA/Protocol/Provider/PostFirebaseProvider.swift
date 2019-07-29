@@ -13,9 +13,9 @@ class PostFirebaseProvider: PostProtocol {
     
     let database = Firestore.firestore().collection(EntryPoint.post.rawValue)
     
-    func getDocuments(completion: @escaping (Error?, [Data]?) -> Void) {
+    func getDocuments(identifier: String, completion: @escaping (Error?, [Data]?) -> Void) {
         var jsonData: [Data] = []
-        database.getDocuments { snapshot, err in
+        database.whereField("id", isEqualTo: identifier).getDocuments { snapshot, err in
             if let error = err {
                 completion(error, nil)
             }
