@@ -34,5 +34,9 @@ class PostsListViewModel {
             self.delegate?.updateData()
         }
     }
+    
+    func sendPost(placeId: String, postText: String) {
+        // TODO: send post to db
+    }
 
 }

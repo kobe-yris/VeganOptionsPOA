@@ -24,6 +24,17 @@ class PostsListController: UIViewController, UITextViewDelegate {
     var placeId: String!
     var viewModel: PostsListViewModel!
     
+    @IBAction func didTapCommentButton(_ sender: UIButton) {
+        if newPost.text.isEmpty || newPost.text == "Faça sua recomendação ou escreva uma opinião" {
+            let actionController = UIAlertController(title: "Não foi possível enviar sua recomendação. Escreva uma recomendação válida.", message: "", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Concluir", style: .default, handler: nil)
+            actionController.addAction(defaultAction)
+            self.present(actionController, animated: true, completion: nil)
+        } else {
+            viewModel.sendPost(placeId: placeId, postText: newPost.text)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -295,7 +295,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Comentar"/>
                                 <connections>
-                                    <action selector="commentButton:" destination="kFC-aB-Tec" eventType="touchUpInside" id="8Bx-HW-MDy"/>
+                                    <action selector="didTapCommentButton:" destination="kFC-aB-Tec" eventType="touchUpInside" id="TY2-Uc-Jqj"/>
                                 </connections>
                             </button>
                         </subviews>
