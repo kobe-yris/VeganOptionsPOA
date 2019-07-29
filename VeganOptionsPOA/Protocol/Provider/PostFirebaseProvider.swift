@@ -13,9 +13,9 @@ class PostFirebaseProvider: PostProtocol {
     
     let database = Firestore.firestore().collection(EntryPoint.post.rawValue)
     
-    func getDocuments(identifier: String, completion: @escaping (Error?, [Data]?) -> Void) {
+    func getDocuments(placeId: String, completion: @escaping (Error?, [Data]?) -> Void) {
         var jsonData: [Data] = []
-        database.whereField("id", isEqualTo: identifier).getDocuments { snapshot, err in
+        database.whereField("placeId", isEqualTo: placeId).getDocuments { snapshot, err in
             if let error = err {
                 completion(error, nil)
             }
@@ -27,6 +27,22 @@ class PostFirebaseProvider: PostProtocol {
                 }
             }
             completion(nil, jsonData)
+        }
+    }
+    
+    func addDocuments(placeId: String, title: String, postText: String, completion: @escaping (Error?, Bool) -> Void) {
+        //TODO: send data to firebase
+        database.addDocument(data: ["title": title,
+                                    "postText": postText,
+                                    "date": getActualDate(),
+                                    "user": "1",
+                                    "likes": "0",
+                                    "placeId": placeId]) { err in
+                                        if let failure = err {
+                                            completion(failure, false)
+                                        } else {
+                                            completion(nil, true)
+                                        }
         }
     }
     

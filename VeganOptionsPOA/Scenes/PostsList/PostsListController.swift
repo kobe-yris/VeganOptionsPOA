@@ -26,12 +26,18 @@ class PostsListController: UIViewController, UITextViewDelegate {
     
     @IBAction func didTapCommentButton(_ sender: UIButton) {
         if newPost.text.isEmpty || newPost.text == "Faça sua recomendação ou escreva uma opinião" {
-            let actionController = UIAlertController(title: "Não foi possível enviar sua recomendação. Escreva uma recomendação válida.", message: "", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "Concluir", style: .default, handler: nil)
-            actionController.addAction(defaultAction)
-            self.present(actionController, animated: true, completion: nil)
+            let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva uma recomendação válida.")
+            self.present(alert, animated: true, completion: nil)
         } else {
-            viewModel.sendPost(placeId: placeId, postText: newPost.text)
+            let status = viewModel.sendPost(placeId: placeId, title: "changeme", postText: newPost.text)
+            if status {
+                let alert = createAlert(alertTitle: "Recomendação enviada!", buttonTitle: "Concluir", message: "")
+                self.present(alert, animated: true, completion: nil)
+                newPost.text = "Faça sua recomendação ou escreva uma opinião"
+            } else {
+                let alert = createAlert(alertTitle: "Erro ao enviar recomendação!", buttonTitle: "Concluir", message: "")
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -94,7 +100,6 @@ extension PostsListController: PostsListViewModelDelegate {
     func updateData() {
         self.posts = viewModel.posts
         self.postsTableView.reloadData()
-        print(posts.count)
     }
 }
 

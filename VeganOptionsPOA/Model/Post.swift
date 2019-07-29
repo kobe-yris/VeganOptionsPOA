@@ -10,32 +10,32 @@ import Foundation
 
 class Post: Codable {
     
-    let identifier: String
     let title: String
     let postText: String
     let date: String
     let likes: String
     let user: String
+    let placeId: String
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: PostCodingKeys.self)
-        identifier = try values.decode(String.self, forKey: .identifier)
         title = try values.decode(String.self, forKey: .title)
         postText = try values.decode(String.self, forKey: .postText)
         date = try values.decode(String.self, forKey: .date)
         likes = try values.decode(String.self, forKey: .likes)
         user = try values.decode(String.self, forKey: .user)
+        placeId = try values.decode(String.self, forKey: .placeId)
     }
     
 }
 
 extension Post {
     enum PostCodingKeys: String, CodingKey {
-        case identifier = "id"
         case title = "title"
         case postText = "postText"
         case date = "date"
         case likes = "likes"
         case user = "user"
+        case placeId = "placeId"
     }
 }

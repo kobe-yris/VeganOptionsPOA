@@ -9,9 +9,11 @@
 import Foundation
 
 protocol PostServiceProtocol {
-    func fetchPosts(identifier: String, completion: @escaping (Error?, [Post]?) -> Void)
+    func fetchPosts(placeId: String, completion: @escaping (Error?, [Post]?) -> Void)
+    func sendPost(placeId: String, title: String, postText: String, completion: @escaping (Error?, Bool) -> Void)
 }
 
 protocol PostProtocol {
-    func getDocuments(identifier: String, completion: @escaping (Error?, [Data]?) -> Void)
+    func getDocuments(placeId: String, completion: @escaping (Error?, [Data]?) -> Void)
+    func addDocuments(placeId: String, title: String, postText: String, completion: @escaping (Error?, Bool) -> Void)
 }

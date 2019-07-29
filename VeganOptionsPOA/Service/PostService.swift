@@ -17,9 +17,9 @@ class PostService: PostServiceProtocol {
         self.provider = provider
     }
     
-    func fetchPosts(identifier: String, completion: @escaping (Error?, [Post]?) -> Void) {
+    func fetchPosts(placeId: String, completion: @escaping (Error?, [Post]?) -> Void) {
         var posts: [Post] = []
-        _ = provider.getDocuments(identifier: identifier) { error, data in
+        _ = provider.getDocuments(placeId: placeId) { error, data in
             if let err = error {
                 completion(err, nil)
             } else {
@@ -33,6 +33,16 @@ class PostService: PostServiceProtocol {
                 }
             }
             completion(nil, posts)
+        }
+    }
+    
+    func sendPost(placeId: String, title: String, postText: String, completion: @escaping (Error?, Bool) -> Void) {
+        _ = provider.addDocuments(placeId: placeId, title: title, postText: postText) { error, status in
+            if let err = error {
+                completion(err, false)
+            } else {
+                completion(nil, true)
+            }
         }
     }
     

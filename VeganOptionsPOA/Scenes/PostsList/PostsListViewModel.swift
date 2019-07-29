@@ -26,7 +26,7 @@ class PostsListViewModel {
     }
     
     func fetchPosts(placeId: String) {
-        service.fetchPosts(identifier: placeId) { error, data in
+        service.fetchPosts(placeId: placeId) { error, data in
             if error == nil {
                 guard let places = data else { return }
                 self.posts = places
@@ -35,8 +35,15 @@ class PostsListViewModel {
         }
     }
     
-    func sendPost(placeId: String, postText: String) {
-        // TODO: send post to db
+    func sendPost(placeId: String, title: String, postText: String) -> Bool {
+        var status = true
+        service.sendPost(placeId: placeId, title: title, postText: postText) { error, stats in
+            status = stats
+            if status {
+                self.fetchPosts(placeId: placeId)
+            }
+        }
+        return status
     }
 
 }

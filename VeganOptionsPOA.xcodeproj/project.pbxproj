@@ -19,6 +19,8 @@
 		C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */; };
 		C775E36922EB367900E1E4B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */; };
 		C7863D9422ED1E860072AD30 /* PlacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */; };
+		C7863D9E22EE95C50072AD30 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D9D22EE95C50072AD30 /* Alert+Extension.swift */; };
+		C7863DA022EEAD4E0072AD30 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D9F22EEAD4E0072AD30 /* Date+Extension.swift */; };
 		C7D1839C22E74F7400720807 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839B22E74F7400720807 /* User.swift */; };
 		C7D183A022E74F8D00720807 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1839F22E74F8D00720807 /* Post.swift */; };
 		C7D183A222E74F9500720807 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D183A122E74F9500720807 /* Place.swift */; };
@@ -51,6 +53,8 @@
 		C7373D7322E73C60004A0C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewModel.swift; sourceTree = "<group>"; };
+		C7863D9D22EE95C50072AD30 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		C7863D9F22EEAD4E0072AD30 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C7D1839B22E74F7400720807 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C7D1839F22E74F8D00720807 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C7D183A122E74F9500720807 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		C7373D6622E73C60004A0C18 /* VeganOptionsPOA */ = {
 			isa = PBXGroup;
 			children = (
+				C7863D9C22EE959E0072AD30 /* Extensions */,
 				C7D183AD22E7DFB300720807 /* Protocol */,
 				C7D1839922E74D1D00720807 /* Service */,
 				C7D1839822E74D1800720807 /* Model */,
@@ -141,6 +146,15 @@
 				0DB9416E22E73FD900F2C834 /* PlacesListTableViewCell.swift */,
 			);
 			path = PlacesList;
+			sourceTree = "<group>";
+		};
+		C7863D9C22EE959E0072AD30 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C7863D9D22EE95C50072AD30 /* Alert+Extension.swift */,
+				C7863D9F22EEAD4E0072AD30 /* Date+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C7D1839522E74CD600720807 /* SupportingFiles */ = {
@@ -349,11 +363,13 @@
 				C7D183BD22E7EDFF00720807 /* PostServiceProtocol.swift in Sources */,
 				0D6AE45322E9DECA00052758 /* PostsListTableViewCell.swift in Sources */,
 				0D6AE44F22E8982900052758 /* PostsListViewModel.swift in Sources */,
+				C7863DA022EEAD4E0072AD30 /* Date+Extension.swift in Sources */,
 				C7D183AC22E7DF2800720807 /* PlaceService.swift in Sources */,
 				C7D183A022E74F8D00720807 /* Post.swift in Sources */,
 				C7D183B622E7E25200720807 /* EntryPoint.swift in Sources */,
 				C7D1839C22E74F7400720807 /* User.swift in Sources */,
 				0D6AE44D22E8964F00052758 /* PostsListController.swift in Sources */,
+				C7863D9E22EE95C50072AD30 /* Alert+Extension.swift in Sources */,
 				C7D183A222E74F9500720807 /* Place.swift in Sources */,
 				0DB9416F22E73FD900F2C834 /* PlacesListTableViewCell.swift in Sources */,
 				C7D183AF22E7DFF700720807 /* PlaceServiceProtocol.swift in Sources */,
