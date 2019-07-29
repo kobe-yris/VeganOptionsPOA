@@ -16,6 +16,23 @@ class PlaceDetailController: UIViewController {
     @IBOutlet weak var placePhone: UILabel!
     @IBOutlet weak var viewComments: UIButton!
     
+    var places: [Place] = []
+    var index: Int = 0
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPosts" {
+            if let destination = segue.destination as? PostsListController {
+                destination.placeId = places[index].identifier
+//                destination.places = self.places
+//                destination.index = self.index
+            }
+        }
+    }
+    
+    @IBAction func didTapViewComments(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToPosts", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -27,12 +44,12 @@ class PlaceDetailController: UIViewController {
         viewComments.layer.cornerRadius = 5
         viewComments.layer.borderWidth = 0.5
         viewComments.layer.borderColor = UIColor.lightGray.cgColor
-        
-//        placeTitle.text = places[myIndex]
+
+        placeTitle.text = places[index].name
 //        placeImage.image = UIImage(named: placesImage[myIndex])
-//        placeDescription.text = placesDescription[myIndex]
-//        placeAddress.text = placesAddress[myIndex]
-//        placePhone.text = placesPhone[myIndex]
+        placeDescription.text = places[index].description
+        placeAddress.text = places[index].address
+        placePhone.text = places[index].phone
     }
 }
 

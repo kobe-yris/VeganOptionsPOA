@@ -113,7 +113,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kFC-aB-Tec" kind="show" id="Wal-h7-6sD"/>
+                                    <action selector="didTapViewComments:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GUc-Xt-qJX"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Dkx-K5-wpj">
@@ -218,16 +218,17 @@
                         <outlet property="placePhone" destination="Rlv-2B-msS" id="hOy-C3-SF2"/>
                         <outlet property="placeTitle" destination="0hK-ST-sqQ" id="i70-65-HDJ"/>
                         <outlet property="viewComments" destination="6Ll-eP-J7a" id="iJR-Pv-xRz"/>
+                        <segue destination="kFC-aB-Tec" kind="show" identifier="goToPosts" id="j2J-JQ-yfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-594.20289855072474" y="-50.223214285714285"/>
         </scene>
-        <!--Post Detail Controller-->
+        <!--Posts List Controller-->
         <scene sceneID="BF3-y7-n6F">
             <objects>
-                <viewController id="kFC-aB-Tec" customClass="PostDetailController" customModule="VeganOptionsPOA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kFC-aB-Tec" customClass="PostsListController" customModule="VeganOptionsPOA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15V-1H-p5W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,7 +237,7 @@
                                 <rect key="frame" x="0.0" y="50" width="414" height="272"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="221" id="fk5-kK-a3p" customClass="PostDetailTableViewCell" customModule="VeganOptionsPOA" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="221" id="fk5-kK-a3p" customClass="PostsListTableViewCell" customModule="VeganOptionsPOA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="221"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fk5-kK-a3p" id="OC7-rW-EQg">
@@ -310,6 +311,7 @@
                     <connections>
                         <outlet property="commentBtn" destination="ODA-wq-dNq" id="u3t-wW-Um9"/>
                         <outlet property="newPost" destination="mLj-JO-SPs" id="oLr-7g-707"/>
+                        <outlet property="postsTableView" destination="c83-qt-SAB" id="iNL-ri-2Ub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJk-1B-d3D" userLabel="First Responder" sceneMemberID="firstResponder"/>

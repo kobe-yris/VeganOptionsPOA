@@ -8,12 +8,6 @@
 
 import UIKit
 
-//var  places = ["Macadâmia", "Vê Empório", "Donna Laura", "Espaço Veganista"]
-//var placesAddress = ["Av. Benno Mentz, 366", "Av. Lageado, 1265", "Rua Cel. Fernando Machado, 1164", "Rua Cel. Paulino Teixeira, 415"]
-//var placesPhone = ["(51) 3517-1001", "(51) 3022-4942", "(51) 3519-3571", "(51) 3557-7710"]
-//var placesImage = ["maca", "veempo", "donna", "espacovega"]
-//var placesDescription = ["Cozinha criativa e refinada de especialidades veganas servidas em ambiente descontraído e contemporâneo.", "O Vê - Empório e Restaurante Vegano é um restaurante com toques modernos e proposta inovadora, sendo o único buffet 100% vegano de Porto Alegre.", "Especializada em comida vegana, a casa serve lanches, salgados e refeições, em espacinho modesto e acolhedor.", "Menu com destaque à torta de vegetais, creme de milho, lentilha caseira, espaço tranquilo e opção delivery."]
-
 class PlacesListController: UITableViewController {
     
     @IBOutlet var placesTableView: UITableView!
@@ -26,6 +20,15 @@ class PlacesListController: UITableViewController {
     override func viewDidLoad() {
         viewModel = PlacesListViewModel()
         viewModel.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue" {
+            if let destination = segue.destination as? PlaceDetailController {
+                destination.places = self.places
+                destination.index = self.index
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +51,6 @@ class PlacesListController: UITableViewController {
     }
     
 }
-
 
 extension PlacesListController: PlacesListViewModelDelegate {
     func updateData() {

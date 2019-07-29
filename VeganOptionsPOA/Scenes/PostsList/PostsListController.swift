@@ -1,5 +1,5 @@
 //
-//  PostDetailControllerViewController.swift
+//  PostsListController.swift
 //  VeganOptionsPOA
 //
 //  Created by Camila Legramante Prestes on 24/07/19.
@@ -8,15 +8,29 @@
 
 import UIKit
 
-class PostDetailController: UIViewController, UITextViewDelegate {
+class PostsListController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var newPost: UITextView!
     @IBOutlet weak var commentBtn: UIButton!
+    @IBOutlet weak var postsTableView: UITableView! {
+        didSet {
+            postsTableView.delegate = self
+            postsTableView.dataSource = self
+        }
+    }
+    
+    var index = 0
+    var posts: [Post] = []
+    var placeId: String!
+    var viewModel: PostsListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         newPost.delegate = self
+        
+        viewModel = PostsListViewModel(placeId: placeId)
+        viewModel.delegate = self
         
         newPost!.layer.borderWidth = 0.5
         newPost!.layer.borderColor = UIColor.lightGray.cgColor
@@ -51,20 +65,42 @@ class PostDetailController: UIViewController, UITextViewDelegate {
     }
 }
 
-extension UIViewController
-{
-    func hideKeyboard()
-    {
+extension UIViewController {
+    func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(UIViewController.dismissKeyboard))
-        
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissKeyboard()
-    {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+}
+
+extension PostsListController: PostsListViewModelDelegate {
+    func updateData() {
+        self.posts = viewModel.posts
+        self.postsTableView.reloadData()
+        print(posts.count)
+    }
+}
+
+extension PostsListController: UITableViewDelegate {
+}
+
+extension PostsListController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostsListTableViewCell
+        cell.postTitle.text = posts[indexPath.row].title
+        cell.postData.text = posts[indexPath.row].date
+        cell.postText.text = posts[indexPath.row].postText
+        return cell
+    }
+    
 }

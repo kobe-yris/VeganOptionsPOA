@@ -1,5 +1,5 @@
 //
-//  PostDetailTableViewCell.swift
+//  PostsListTableViewCell.swift
 //  VeganOptionsPOA
 //
 //  Created by Camila Legramante Prestes on 25/07/19.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PostDetailTableViewCell: UITableViewCell {
-    @IBOutlet weak var postTitle: UILabel!    
+class PostsListTableViewCell: UITableViewCell {
+  
+    @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postText: UITextView!
     @IBOutlet weak var postData: UILabel!
     
