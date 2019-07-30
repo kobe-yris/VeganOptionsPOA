@@ -12,6 +12,8 @@ class PostsListController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var newPost: UITextView!
     @IBOutlet weak var commentBtn: UIButton!
+    @IBOutlet weak var postUserName: UITextField!
+    @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var postsTableView: UITableView! {
         didSet {
             postsTableView.delegate = self
@@ -28,12 +30,17 @@ class PostsListController: UIViewController, UITextViewDelegate {
         if newPost.text.isEmpty || newPost.text == "Faça sua recomendação ou escreva uma opinião" {
             let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva uma recomendação válida.")
             self.present(alert, animated: true, completion: nil)
+        } else if postTitle.text == "" {
+            let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva um título válido.")
+            self.present(alert, animated: true, completion: nil)
         } else {
-            let status = viewModel.sendPost(placeId: placeId, title: "changeme", postText: newPost.text)
+            guard let title = postTitle.text else { return }
+            let status = viewModel.sendPost(placeId: placeId, title: title, postText: newPost.text)
             if status {
                 let alert = createAlert(alertTitle: "Recomendação enviada!", buttonTitle: "Concluir", message: "")
                 self.present(alert, animated: true, completion: nil)
                 newPost.text = "Faça sua recomendação ou escreva uma opinião"
+                postTitle.text = ""
             } else {
                 let alert = createAlert(alertTitle: "Erro ao enviar recomendação!", buttonTitle: "Concluir", message: "")
                 self.present(alert, animated: true, completion: nil)

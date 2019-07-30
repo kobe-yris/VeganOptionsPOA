@@ -354,6 +354,8 @@
                     <connections>
                         <outlet property="commentBtn" destination="ODA-wq-dNq" id="u3t-wW-Um9"/>
                         <outlet property="newPost" destination="mLj-JO-SPs" id="oLr-7g-707"/>
+                        <outlet property="postTitle" destination="cH4-oN-86c" id="JaD-hT-hSG"/>
+                        <outlet property="postUserName" destination="G67-ac-xrM" id="cgm-rr-A7m"/>
                         <outlet property="postsTableView" destination="c83-qt-SAB" id="iNL-ri-2Ub"/>
                     </connections>
                 </viewController>
