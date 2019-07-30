@@ -10,10 +10,11 @@ import UIKit
 
 class PostsListController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var postUsername: UITextField!
+    @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var newPost: UITextView!
     @IBOutlet weak var commentBtn: UIButton!
-    @IBOutlet weak var postUser: UITextField!
-    @IBOutlet weak var postTitle: UITextField!
+//    @IBOutlet weak var postUser: UITextField!
     @IBOutlet weak var postsTableView: UITableView! {
         didSet {
             postsTableView.delegate = self
@@ -27,7 +28,7 @@ class PostsListController: UIViewController, UITextViewDelegate {
     var viewModel: PostsListViewModel!
     
     @IBAction func didTapCommentButton(_ sender: UIButton) {
-        if postUser.text == "" {
+        if postUsername.text == "" {
             let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva um nome válido.")
             self.present(alert, animated: true, completion: nil)
         } else if postTitle.text == "" {
@@ -37,14 +38,14 @@ class PostsListController: UIViewController, UITextViewDelegate {
             let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva uma recomendação válida.")
             self.present(alert, animated: true, completion: nil)
         } else {
-            guard let title = postTitle.text, let user = postUser.text else { return }
+            guard let title = postTitle.text, let user = postUsername.text else { return }
             let status = viewModel.sendPost(placeId: placeId, title: title, postText: newPost.text, user: user)
             if status {
                 let alert = createAlert(alertTitle: "Recomendação enviada!", buttonTitle: "Concluir", message: "")
                 self.present(alert, animated: true, completion: nil)
                 newPost.text = "Faça sua recomendação ou escreva uma opinião"
                 postTitle.text = ""
-                postUser.text = ""
+                postUsername.text = ""
             } else {
                 let alert = createAlert(alertTitle: "Erro ao enviar recomendação!", buttonTitle: "Concluir", message: "")
                 self.present(alert, animated: true, completion: nil)
