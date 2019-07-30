@@ -15,6 +15,7 @@ class Place: Codable {
     let address: String
     let phone: String
     let description: String
+    let image: String
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: PlaceCodingKeys.self)
@@ -23,6 +24,7 @@ class Place: Codable {
         address = try values.decode(String.self, forKey: .address)
         phone = try values.decode(String.self, forKey: .phone)
         description = try values.decode(String.self, forKey: .description)
+        image = try values.decode(String.self, forKey: .image)
     }
     
 }
@@ -34,5 +36,6 @@ extension Place {
         case address = "address"
         case phone = "phone"
         case description = "description"
+        case image = "image"
     }
 }

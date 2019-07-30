@@ -46,10 +46,14 @@ class PlaceDetailController: UIViewController {
         viewComments.layer.borderColor = UIColor.lightGray.cgColor
 
         placeTitle.text = places[index].name
-//        placeImage.image = UIImage(named: placesImage[myIndex])
         placeDescription.text = places[index].description
         placeAddress.text = places[index].address
         placePhone.text = places[index].phone
+        
+        let imageUrl = URL(string: places[index].image)
+        if let url = imageUrl, let data = try? Data(contentsOf: url) {
+            placeImage.image = UIImage(data: data)
+        }
     }
 }
 

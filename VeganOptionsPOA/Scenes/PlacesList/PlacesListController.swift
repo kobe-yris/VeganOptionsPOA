@@ -38,9 +38,13 @@ class PlacesListController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PlacesListTableViewCell
         cell.placeTitle.text = places[indexPath.row].name
-//        cell.imageView?.image = UIImage(named: placesImage[indexPath.row])
         cell.placeAddress.text = places[indexPath.row].address
         cell.placePhone.text = places[indexPath.row].phone
+        
+        let imageUrl = URL(string: places[indexPath.row].image)
+        if let url = imageUrl, let data = try? Data(contentsOf: url) {
+            cell.imageView?.image = UIImage(data: data)
+        }
         
         return cell
     }
