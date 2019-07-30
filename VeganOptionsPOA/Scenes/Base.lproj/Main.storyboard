@@ -264,6 +264,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ya-zi-he8">
                                         <rect key="frame" x="20" y="200" width="374" height="30"/>
                                         <state key="normal" title="Comentar"/>
+                                        <connections>
+                                            <action selector="didTapCommentButton:" destination="kFC-aB-Tec" eventType="touchUpInside" id="Bqe-EZ-T6L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -383,7 +386,7 @@
                         <viewLayoutGuide key="safeArea" id="3pX-Xg-zNV"/>
                     </view>
                     <connections>
-                        <outlet property="commentBtn" destination="8ya-zi-he8" id="SZc-kt-HAs"/>
+                        <outlet property="commentBtn" destination="8ya-zi-he8" id="sLb-eC-dpb"/>
                         <outlet property="newPost" destination="XhT-vB-TU7" id="YKu-xb-sxD"/>
                         <outlet property="postTitle" destination="9TM-9d-D4j" id="FfA-jX-169"/>
                         <outlet property="postUsername" destination="BqR-k2-KjW" id="VbC-ox-4r7"/>
