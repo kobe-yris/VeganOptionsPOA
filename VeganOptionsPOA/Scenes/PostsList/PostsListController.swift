@@ -12,7 +12,7 @@ class PostsListController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var newPost: UITextView!
     @IBOutlet weak var commentBtn: UIButton!
-    @IBOutlet weak var postUserName: UITextField!
+    @IBOutlet weak var postUser: UITextField!
     @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var postsTableView: UITableView! {
         didSet {
@@ -27,20 +27,24 @@ class PostsListController: UIViewController, UITextViewDelegate {
     var viewModel: PostsListViewModel!
     
     @IBAction func didTapCommentButton(_ sender: UIButton) {
-        if newPost.text.isEmpty || newPost.text == "Faça sua recomendação ou escreva uma opinião" {
-            let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva uma recomendação válida.")
+        if postUser.text == "" {
+            let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva um nome válido.")
             self.present(alert, animated: true, completion: nil)
         } else if postTitle.text == "" {
             let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva um título válido.")
             self.present(alert, animated: true, completion: nil)
+        } else if newPost.text.isEmpty || newPost.text == "Faça sua recomendação ou escreva uma opinião" {
+            let alert = createAlert(alertTitle: "Não foi possível enviar sua recomendação.", buttonTitle: "Concluir", message: "Escreva uma recomendação válida.")
+            self.present(alert, animated: true, completion: nil)
         } else {
-            guard let title = postTitle.text else { return }
-            let status = viewModel.sendPost(placeId: placeId, title: title, postText: newPost.text)
+            guard let title = postTitle.text, let user = postUser.text else { return }
+            let status = viewModel.sendPost(placeId: placeId, title: title, postText: newPost.text, user: user)
             if status {
                 let alert = createAlert(alertTitle: "Recomendação enviada!", buttonTitle: "Concluir", message: "")
                 self.present(alert, animated: true, completion: nil)
                 newPost.text = "Faça sua recomendação ou escreva uma opinião"
                 postTitle.text = ""
+                postUser.text = ""
             } else {
                 let alert = createAlert(alertTitle: "Erro ao enviar recomendação!", buttonTitle: "Concluir", message: "")
                 self.present(alert, animated: true, completion: nil)
@@ -123,6 +127,7 @@ extension PostsListController: UITableViewDataSource {
         cell.postTitle.text = posts[indexPath.row].title
         cell.postData.text = posts[indexPath.row].date
         cell.postText.text = posts[indexPath.row].postText
+        cell.postUsername.text = posts[indexPath.row].user
         return cell
     }
     

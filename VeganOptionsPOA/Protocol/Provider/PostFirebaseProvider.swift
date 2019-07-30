@@ -30,12 +30,12 @@ class PostFirebaseProvider: PostProtocol {
         }
     }
     
-    func addDocuments(placeId: String, title: String, postText: String, completion: @escaping (Error?, Bool) -> Void) {
+    func addDocuments(placeId: String, title: String, postText: String, user: String, completion: @escaping (Error?, Bool) -> Void) {
         //TODO: send data to firebase
         database.addDocument(data: ["title": title,
                                     "postText": postText,
                                     "date": getActualDate(),
-                                    "user": "1",
+                                    "user": user,
                                     "likes": "0",
                                     "placeId": placeId]) { err in
                                         if let failure = err {

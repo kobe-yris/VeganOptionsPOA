@@ -35,9 +35,9 @@ class PostsListViewModel {
         }
     }
     
-    func sendPost(placeId: String, title: String, postText: String) -> Bool {
+    func sendPost(placeId: String, title: String, postText: String, user: String) -> Bool {
         var status = true
-        service.sendPost(placeId: placeId, title: title, postText: postText) { error, stats in
+        service.sendPost(placeId: placeId, title: title, postText: postText, user: user) { error, stats in
             status = stats
             if status {
                 self.fetchPosts(placeId: placeId)

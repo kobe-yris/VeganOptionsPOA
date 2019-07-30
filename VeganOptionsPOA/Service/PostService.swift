@@ -36,8 +36,8 @@ class PostService: PostServiceProtocol {
         }
     }
     
-    func sendPost(placeId: String, title: String, postText: String, completion: @escaping (Error?, Bool) -> Void) {
-        _ = provider.addDocuments(placeId: placeId, title: title, postText: postText) { error, status in
+    func sendPost(placeId: String, title: String, postText: String, user: String, completion: @escaping (Error?, Bool) -> Void) {
+        _ = provider.addDocuments(placeId: placeId, title: title, postText: postText, user: user) { error, status in
             if let err = error {
                 completion(err, false)
             } else {
