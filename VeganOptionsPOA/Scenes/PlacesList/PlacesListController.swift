@@ -55,14 +55,21 @@ extension PlacesListController: UITableViewDataSource {
         
         let imageUrl = URL(string: places[indexPath.row].image)
         if let url = imageUrl, let data = try? Data(contentsOf: url) {
-            cell.imageView?.image = UIImage(data: data)
+            cell.placeImage.image = UIImage(data: data)
         }
+        
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = UIColor.white.cgColor
+        
+        cell.placeImage.layer.cornerRadius = 50
+        cell.placeImage.clipsToBounds = true
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "segue", sender: self)
     }
 }

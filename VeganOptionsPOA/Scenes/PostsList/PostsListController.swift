@@ -129,6 +129,10 @@ extension PostsListController: UITableViewDataSource {
         cell.postData.text = posts[indexPath.row].date
         cell.postText.text = posts[indexPath.row].postText
         cell.postUsername.text = posts[indexPath.row].user
+        
+        cell.avatar.layer.cornerRadius = 50
+        cell.avatar.clipsToBounds = true
+        
         return cell
     }
     

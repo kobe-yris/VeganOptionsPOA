@@ -14,5 +14,5 @@ class PostsListTableViewCell: UITableViewCell {
     @IBOutlet weak var postText: UITextView!
     @IBOutlet weak var postData: UILabel!
     @IBOutlet weak var postUsername: UILabel!
-    
+    @IBOutlet weak var avatar: UIImageView!
 }
