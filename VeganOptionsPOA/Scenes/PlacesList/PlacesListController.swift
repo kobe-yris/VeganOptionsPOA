@@ -8,9 +8,14 @@
 
 import UIKit
 
-class PlacesListController: UITableViewController {
+class PlacesListController: UIViewController {
     
-    @IBOutlet var placesTableView: UITableView!
+    @IBOutlet var placesTableView: UITableView! {
+        didSet {
+            placesTableView.dataSource = self
+            placesTableView.delegate = self
+        }
+    }
     
     var places: [Place] = []
     var index = 0
@@ -31,11 +36,18 @@ class PlacesListController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+
+extension PlacesListController: UITableViewDelegate {
+    
+}
+
+extension PlacesListController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return places.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PlacesListTableViewCell
         cell.placeTitle.text = places[indexPath.row].name
         cell.placeAddress.text = places[indexPath.row].address
@@ -49,11 +61,10 @@ class PlacesListController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
         performSegue(withIdentifier: "segue", sender: self)
     }
-    
 }
 
 extension PlacesListController: PlacesListViewModelDelegate {
