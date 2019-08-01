@@ -86,6 +86,8 @@ extension PlacesListController: UITableViewDataSource {
         cell.layer.borderColor = UIColor.white.cgColor
         
         cell.placeImage.layer.cornerRadius = 50
+        cell.placeImage.layer.borderWidth = 1
+        cell.placeImage.layer.borderColor = UIColor.lightGray.cgColor
         cell.placeImage.clipsToBounds = true
         
         return cell

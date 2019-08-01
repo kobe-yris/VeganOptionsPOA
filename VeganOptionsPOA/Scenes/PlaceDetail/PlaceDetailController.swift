@@ -34,7 +34,7 @@ class PlaceDetailController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
                 
         placeImage.layer.cornerRadius = 10
         placeImage.layer.shadowOffset = CGSize(width: 10, height: 1)

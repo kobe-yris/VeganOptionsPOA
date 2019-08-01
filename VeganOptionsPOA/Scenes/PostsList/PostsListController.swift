@@ -135,9 +135,10 @@ extension PostsListController: UITableViewDataSource {
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIColor.lightGray.cgColor
         
-//        cell.avatar.layer.borderColor = UIColor.lightGray.cgColor
-//        cell.avatar.layer.borderWidth = 1
-//        cell.avatar.clipsToBounds = true
+        cell.avatar.layer.borderColor = UIColor.lightGray.cgColor
+        cell.avatar.layer.borderWidth = 1
+        cell.avatar.clipsToBounds = true
+        cell.avatar.layer.cornerRadius = 35
         
         
         return cell
