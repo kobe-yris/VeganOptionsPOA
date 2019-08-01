@@ -37,9 +37,8 @@ class PlaceDetailController: UIViewController {
         super.viewDidLoad()
                 
         placeImage.layer.cornerRadius = 10
-        placeImage.layer.shadowOffset = CGSize(width: 5, height: 1)
+        placeImage.layer.shadowOffset = CGSize(width: 10, height: 1)
         placeImage.layer.shadowColor = UIColor.purple.cgColor
-        placeImage.layer.isOpaque = true
         
         viewComments.layer.cornerRadius = 5
         viewComments.layer.borderWidth = 0.5
