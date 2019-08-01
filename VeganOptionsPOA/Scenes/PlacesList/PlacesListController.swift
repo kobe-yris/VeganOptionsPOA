@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 11.0, *)
 class PlacesListController: UIViewController {
     
     @IBOutlet var placesTableView: UITableView! {
@@ -19,12 +20,23 @@ class PlacesListController: UIViewController {
     
     var places: [Place] = []
     var index = 0
+    var filteredPlaces: [Place] = []
     
     var viewModel: PlacesListViewModel!
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         viewModel = PlacesListViewModel()
         viewModel.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Procurar locais"
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+            navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            // Fallback on earlier versions
+        }
+        definesPresentationContext = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,22 +50,34 @@ class PlacesListController: UIViewController {
     
 }
 
+@available(iOS 11.0, *)
 extension PlacesListController: UITableViewDelegate {
     
 }
 
+@available(iOS 11.0, *)
 extension PlacesListController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredPlaces.count
+        }
         return places.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PlacesListTableViewCell
-        cell.placeTitle.text = places[indexPath.row].name
-        cell.placeAddress.text = places[indexPath.row].address
-        cell.placePhone.text = places[indexPath.row].phone
+        var place: Place
+        if isFiltering() {
+            place = filteredPlaces[indexPath.row]
+        } else {
+            place = places[indexPath.row]
+        }
         
-        let imageUrl = URL(string: places[indexPath.row].image)
+        cell.placeTitle.text = place.name
+        cell.placeAddress.text = place.address
+        cell.placePhone.text = place.phone
+        
+        let imageUrl = URL(string: place.image)
         if let url = imageUrl, let data = try? Data(contentsOf: url) {
             cell.placeImage.image = UIImage(data: data)
         }
@@ -74,9 +98,32 @@ extension PlacesListController: UITableViewDataSource {
     }
 }
 
+@available(iOS 11.0, *)
 extension PlacesListController: PlacesListViewModelDelegate {
     func updateData() {
         self.places = viewModel.places
         self.placesTableView.reloadData()
+    }
+}
+
+@available(iOS 11.0, *)
+extension PlacesListController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredPlaces = places.filter({( place : Place) -> Bool in
+            return place.name.range(of: searchText, options: [.diacriticInsensitive, .caseInsensitive]) != nil
+        })
+       placesTableView.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
     }
 }

@@ -72,6 +72,8 @@ class PostsListController: UIViewController, UITextViewDelegate {
         commentBtn.layer.borderWidth = 0.5
         commentBtn.layer.borderColor = UIColor.lightGray.cgColor
         
+        self.navigationController?.navigationBar.topItem?.title = "Vol"
+        
         self.hideKeyboard()
     }
     
