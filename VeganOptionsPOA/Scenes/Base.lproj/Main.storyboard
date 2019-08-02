@@ -389,7 +389,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-w2-1Aj">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-w2-1Aj">
                                                     <rect key="frame" x="86" y="48" width="300" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -439,13 +439,22 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q3E-jd-k74">
                                 <rect key="frame" x="197" y="465" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Este local ainda não possui comentários. Seja o primeiro a comentar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOy-qh-dL5">
+                                <rect key="frame" x="20" y="348" width="374" height="82.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qcR-lh-eeA" firstAttribute="top" secondItem="3pX-Xg-zNV" secondAttribute="top" id="1o6-K3-InR"/>
                             <constraint firstItem="SKS-a9-2sw" firstAttribute="leading" secondItem="3pX-Xg-zNV" secondAttribute="leading" id="41m-l5-roX"/>
                             <constraint firstItem="SKS-a9-2sw" firstAttribute="bottom" secondItem="3pX-Xg-zNV" secondAttribute="bottom" id="IW4-h2-12j"/>
+                            <constraint firstAttribute="trailing" secondItem="uOy-qh-dL5" secondAttribute="trailing" constant="20" id="T43-UL-B4J"/>
                             <constraint firstItem="SKS-a9-2sw" firstAttribute="trailing" secondItem="3pX-Xg-zNV" secondAttribute="trailing" id="U0D-Ur-6te"/>
+                            <constraint firstItem="uOy-qh-dL5" firstAttribute="leading" secondItem="3pX-Xg-zNV" secondAttribute="leading" constant="20" id="W2y-vF-Cb6"/>
+                            <constraint firstItem="uOy-qh-dL5" firstAttribute="top" secondItem="3pX-Xg-zNV" secondAttribute="top" constant="260" id="ZpS-Cv-RdB"/>
                             <constraint firstItem="SKS-a9-2sw" firstAttribute="top" secondItem="qcR-lh-eeA" secondAttribute="bottom" constant="1" id="Zt0-Mb-NmM"/>
                             <constraint firstItem="Q3E-jd-k74" firstAttribute="centerX" secondItem="3pX-Xg-zNV" secondAttribute="centerX" id="t4H-sY-1T9"/>
                             <constraint firstItem="qcR-lh-eeA" firstAttribute="leading" secondItem="3pX-Xg-zNV" secondAttribute="leading" id="v0b-e9-ebA"/>
@@ -461,6 +470,7 @@
                         <outlet property="postTitle" destination="9TM-9d-D4j" id="FfA-jX-169"/>
                         <outlet property="postUsername" destination="BqR-k2-KjW" id="VbC-ox-4r7"/>
                         <outlet property="postsTableView" destination="qcR-lh-eeA" id="nua-Pc-7C4"/>
+                        <outlet property="withoutPosts" destination="uOy-qh-dL5" id="zGb-ec-QEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJk-1B-d3D" userLabel="First Responder" sceneMemberID="firstResponder"/>

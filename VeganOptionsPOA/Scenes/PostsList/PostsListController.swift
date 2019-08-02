@@ -15,6 +15,7 @@ class PostsListController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var newPost: UITextView!
     @IBOutlet weak var commentBtn: UIButton!
+    @IBOutlet weak var withoutPosts: UILabel!
     @IBOutlet weak var postsTableView: UITableView! {
         didSet {
             postsTableView.delegate = self
@@ -115,6 +116,11 @@ extension PostsListController: PostsListViewModelDelegate {
         self.posts = viewModel.posts
         self.postsTableView.reloadData()
         self.loadingIndicator.stopAnimating()
+        if self.posts.count < 1 {
+            self.withoutPosts.isHidden = false
+        } else {
+            self.withoutPosts.isHidden = true
+        }
     }
 }
 
