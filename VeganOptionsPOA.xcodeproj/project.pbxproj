@@ -17,6 +17,7 @@
 		C7373D6D22E73C60004A0C18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6B22E73C60004A0C18 /* Main.storyboard */; };
 		C7373D6F22E73C60004A0C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7373D6E22E73C60004A0C18 /* Assets.xcassets */; };
 		C7373D7222E73C60004A0C18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7373D7022E73C60004A0C18 /* LaunchScreen.storyboard */; };
+		C75EC6F922F3CF7A00217344 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75EC6F822F3CF7A00217344 /* UIColor+Extension.swift */; };
 		C775E36922EB367900E1E4B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */; };
 		C7863D9422ED1E860072AD30 /* PlacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */; };
 		C7863D9E22EE95C50072AD30 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7863D9D22EE95C50072AD30 /* Alert+Extension.swift */; };
@@ -51,6 +52,7 @@
 		C7373D6E22E73C60004A0C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7373D7122E73C60004A0C18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7373D7322E73C60004A0C18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C75EC6F822F3CF7A00217344 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C775E36822EB367800E1E4B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C7863D9322ED1E860072AD30 /* PlacesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewModel.swift; sourceTree = "<group>"; };
 		C7863D9D22EE95C50072AD30 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				C7863D9D22EE95C50072AD30 /* Alert+Extension.swift */,
 				C7863D9F22EEAD4E0072AD30 /* Date+Extension.swift */,
+				C75EC6F822F3CF7A00217344 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				C7D183B422E7E11C00720807 /* PlaceFirebaseProvider.swift in Sources */,
 				C7D183A422E74FA400720807 /* Report.swift in Sources */,
 				C7D183BD22E7EDFF00720807 /* PostServiceProtocol.swift in Sources */,
+				C75EC6F922F3CF7A00217344 /* UIColor+Extension.swift in Sources */,
 				0D6AE45322E9DECA00052758 /* PostsListTableViewCell.swift in Sources */,
 				0D6AE44F22E8982900052758 /* PostsListViewModel.swift in Sources */,
 				C7863DA022EEAD4E0072AD30 /* Date+Extension.swift in Sources */,

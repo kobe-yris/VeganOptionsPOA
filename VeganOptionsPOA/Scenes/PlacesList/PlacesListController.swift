@@ -10,7 +10,7 @@ import UIKit
 
 @available(iOS 11.0, *)
 class PlacesListController: UIViewController {
-    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var placesTableView: UITableView! {
         didSet {
             placesTableView.dataSource = self
@@ -33,10 +33,8 @@ class PlacesListController: UIViewController {
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
             navigationItem.hidesSearchBarWhenScrolling = false
-        } else {
-            // Fallback on earlier versions
+            definesPresentationContext = true
         }
-        definesPresentationContext = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,7 +81,7 @@ extension PlacesListController: UITableViewDataSource {
         }
         
         cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderColor = UIColor.lightGray.cgColor
         
         cell.placeImage.layer.cornerRadius = 50
         cell.placeImage.layer.borderWidth = 1
@@ -105,6 +103,7 @@ extension PlacesListController: PlacesListViewModelDelegate {
     func updateData() {
         self.places = viewModel.places
         self.placesTableView.reloadData()
+        self.loadingIndicator.stopAnimating()
     }
 }
 

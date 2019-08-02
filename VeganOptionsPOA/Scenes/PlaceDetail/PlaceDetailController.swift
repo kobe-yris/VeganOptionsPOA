@@ -23,8 +23,6 @@ class PlaceDetailController: UIViewController {
         if segue.identifier == "goToPosts" {
             if let destination = segue.destination as? PostsListController {
                 destination.placeId = places[index].identifier
-//                destination.places = self.places
-//                destination.index = self.index
             }
         }
     }
@@ -34,13 +32,15 @@ class PlaceDetailController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        
+        navigationItem.title = places[index].name
                 
         placeImage.layer.cornerRadius = 10
         placeImage.layer.shadowOffset = CGSize(width: 10, height: 1)
         placeImage.layer.shadowColor = UIColor.purple.cgColor
         
-        viewComments.layer.cornerRadius = 5
+        viewComments.layer.cornerRadius = 7
         viewComments.layer.borderWidth = 0.5
         viewComments.layer.borderColor = UIColor.lightGray.cgColor
 

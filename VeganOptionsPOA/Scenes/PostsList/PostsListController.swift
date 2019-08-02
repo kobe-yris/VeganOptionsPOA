@@ -14,7 +14,6 @@ class PostsListController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var newPost: UITextView!
     @IBOutlet weak var commentBtn: UIButton!
-//    @IBOutlet weak var postUser: UITextField!
     @IBOutlet weak var postsTableView: UITableView! {
         didSet {
             postsTableView.delegate = self
@@ -55,6 +54,8 @@ class PostsListController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Comentários"
         
         newPost.delegate = self
         
