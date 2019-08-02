@@ -10,6 +10,7 @@ import UIKit
 
 class PostsListController: UIViewController, UITextViewDelegate {
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var postUsername: UITextField!
     @IBOutlet weak var postTitle: UITextField!
     @IBOutlet weak var newPost: UITextView!
@@ -69,11 +70,9 @@ class PostsListController: UIViewController, UITextViewDelegate {
         newPost.text = "Faça sua recomendação ou escreva uma opinião"
         newPost.textColor = UIColor.lightGray
         
-        commentBtn.layer.cornerRadius = 5
+        commentBtn.layer.cornerRadius = 7
         commentBtn.layer.borderWidth = 0.5
         commentBtn.layer.borderColor = UIColor.lightGray.cgColor
-        
-        self.navigationController?.navigationBar.topItem?.title = "Vol"
         
         self.hideKeyboard()
     }
@@ -115,6 +114,7 @@ extension PostsListController: PostsListViewModelDelegate {
     func updateData() {
         self.posts = viewModel.posts
         self.postsTableView.reloadData()
+        self.loadingIndicator.stopAnimating()
     }
 }
 
